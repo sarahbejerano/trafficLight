@@ -1,15 +1,29 @@
-//import react into the bundle
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
-
-//include bootstrap npm library into the bundle
+import ReactDOM from "react-dom"; //quiero saber mas sobre ReactDOM cuando se utiliza y cuando no
 import "bootstrap";
-
-//include your index.scss file into the bundle
 import "../styles/index.scss";
 
-//import your own components
-import trafficLight from "./component/home.jsx";
+//create your first component
+const trafficLight = () => {
+	const [color, setColor] = useState("off");
+	let redLight = "bg-danger";
+	let yellowLight = "bg-warning";
+	let greenLight = "bg-success";
+	let off = "bg-dark";
 
-//render your react application
-ReactDOM.render(<trafficLight />, document.querySelector("#app"));
+	return (
+		<div className="trafficLightBox">
+			<div className={redLight} onClick={() => setColor("redLight")}>
+				{color == "yellow" || color == "greenLight" ? (
+					<div className={off}>off</div>
+				) : (
+					<div className={redLight}>on</div>
+				)}
+			</div>
+			<div className={yellowLight}></div>;
+			<div className={greenLight}></div>;
+		</div>
+	);
+};
+
+export default trafficLight;

@@ -1,11 +1,16 @@
-import React, { useState } from "react";
 
+   
+import React from "react";
 
-
-//create your first component
-const trafficLight = () => {
-	
-	return ();
-};
-
-export default trafficLight;
+ //include images into your bundle
+ import rigoImage from "../../img/rigo-baby.jpg";
+ 
+ //create your first component
+ const Home = () => {
+	 return (
+		 <div>
+		 </div>
+	 );
+ };
+ 
+ export default Home;
