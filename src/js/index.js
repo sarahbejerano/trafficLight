@@ -12,7 +12,7 @@ const trafficLight = () => {
 	let off = "bg-dark";
 
 	return (
-		<div className="trafficLightBox">
+		<div className={trafficLightBox}>
 			<div className={redLight} onClick={() => setColor("redLight")}>
 				{color == "yellow" || color == "greenLight" ? (
 					<div className={off}>off</div>
